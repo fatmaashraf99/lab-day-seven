@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> array api methods </title>
+</head>
+<body>
+    
+</body>
+<script>
+    //----------------------------------question one---------------------------------------
+     var fruits = ["apple", "strawberry", "banana", "orange", "mango"] ;
+
+     const isStringsArray = arr => arr.every(i => typeof i === "string");
+     console.log(isStringsArray(fruits));
+//----------------------------------question two---------------------------------------
+     console.log(fruits.map(v=>v[0]));
+      
+
+     let counter = 0;
+     for (var i = 0;i<fruits.length;i++){
+        if(fruits.map(v=>v[0])[i]=="a"){
+            counter++;
+          
+        
+        }
+       
+     }
+     console.log("the number of fruits statrt with letter a is ",counter);
+     
+
+
+    
+
+//-------------------------------question three------------------------------------------
+
+function isfiltered(value){
+   return (value[0]=="b" ||value[0]=="s")  
+}
+     var filteredfruits=fruits.filter(isfiltered);
+    console.log(filteredfruits); 
+   
+
+//-------------------------------question four------------------------------------------
+
+
+filteredfruits.forEach(element => console.log(element));
+
+
+    
+
+ 
+
+</script>
+</html>

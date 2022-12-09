@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  literal object </title>
+</head>
+<body>
+    
+</body>
+<script>
+
+ 
+let department = {
+   location : "egypt",
+    address: {
+        city: "aswan",
+        street: "street 1",
+        zipcode: "0000"
+        
+    },
+    printdepartmentinfo: function () { return this.location  +' '+ this.address.city + ' ' + this.address.street  + ' ' + this.address.zipcode }
+ 
+};
+ 
+console.log(department.printdepartmentinfo());
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> a set that holds countries names </title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+
+checkDuplicate();
+
+   function checkDuplicate() {
+      let countries = ["egypt","USA","france","egypt"];
+      
+      let result = false;
+      
+      const setofcountries = new Set(countries);
+    
+      if(countries.length !== setofcountries.size){
+         result = true;
+         
+      
+      }
+      if(result) {
+         console.log('Array contains duplicate elements');
+      } else {
+         console.log('Array does not contain duplicate elements');
+      }
+ 
+   }
+
+
+
+
+   let countries = ["egypt","USA","france","egypt"];
+   const setofcountries = new Set(countries);
+   console.log(countries.length); //4
+   console.log(setofcountries.size); //3
+
+</script>
+</html>

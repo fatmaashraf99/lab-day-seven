@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task one</title>
+</head>
+<body>
+    <h3>what is the difference between static method and member method</h3>
+    <p>The static member functions are unique functions that can be used to access other static member functions or static data members.
+
+    </p>
+
+
+ 
+</body>
+<script>
+    class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+ 
+  getName() {
+    return "Hello My Name is " + this.name ;
+  }
+
+
+  getAge(){
+    return "i am "+ this.age +" years old";
+  }
+
+  
+}
+
+
+class employee extends Person{
+    //static counter to count number of objects 
+
+    static count() {
+        employee.counter = (employee.counter || 0) + 1;
+        return;
+    }
+
+    constructor(name,age,salary){
+        super(name,age);
+        
+        this.salary = salary;
+        employee.count();
+       
+
+    }
+    showSalary(){
+        return "my salary equal " + this.salary;
+    }
+    increaseSalary(salary){
+        this.salary +=1000;
+        return this.salary;
+    }
+
+    static displayHTRules(){
+       return "HR RULES : RULE 1 - RULE 2 - RULE 3";
+    
+}
+
+
+
+    
+}
+class student extends Person{
+    constructor(name,age,university){
+        super(name,age);
+        // this.university=university;
+    }
+    setUniversity(uni){
+        return this.university=uni;
+    }
+    getUniversity(){
+        return "my university is "+this.university;
+    }
+}
+
+
+
+const person1 = new Person("fatma", 23); 
+console.log( person1.getName());  
+console.log( person1.getAge()); 
+
+
+
+console.log("employee class ")
+const employee1 = new employee("fatma",23,10000);
+console.log(employee1.getName());
+console.log(employee1.getAge());
+employee1.increaseSalary(employee1.salary);
+console.log(employee1.showSalary());
+ console.log(employee.displayHTRules());
+ console.log("object"+employee.counter);
+ const employee2 =new employee("omar ", 22 ,5000);
+ console.log("object"+employee.counter);
+
+
+
+console.log("student class ")
+const student1=new student("fatma",21);
+student1.setUniversity("computer science");
+console.log(student1.getName());
+console.log(student1.getAge());
+console.log(student1.getUniversity());
+
+
+
+
+
+</script>
+</html>
